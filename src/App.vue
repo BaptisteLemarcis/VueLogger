@@ -12,6 +12,12 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  created () {
+    this.$logger.print(this.$LogLevel.ERROR, 'App', 'MyError')
+    this.$logger.print(this.$LogLevel.WARN, 'App', 'MyWarn')
+    this.$logger.print(this.$LogLevel.INFO, 'App', 'MyInfo')
+    this.$logger.print(this.$LogLevel.DEBUG, 'App', 'MyDebug')
   }
 }
 </script>
